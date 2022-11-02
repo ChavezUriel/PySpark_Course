@@ -1,0 +1,33 @@
+When we have a two column table, we call it key/value RDD's
+We can have lists as values as well
+
+## some usefull functions to deal with this kind of RDD's
+
+reduceByKey()
+if we want to agreggate all the values having the sabe key we can use this function
+it recieves a funciton than indicates how to aggregate
+example: rdd.reduceByKey(lambda x,y: x+y)
+
+groupByKey()
+Groups by key and get a list of values having the same key
+
+sortByKey()
+Sort RDD by key values
+
+key(), values()
+creates an RDD of just keys or just values
+
+
+## SQL like joins
+we can perform sql like joins with these funciotns
+join, rightOuterJoin, leftOuterJoin, cogroup, subtractByKey
+
+
+## only on values functions
+we can use mapValues() or flatMapValues() to transform rdds and dont affect keys 
+this is more efficient than using standard functions and ignoring the key
+
+
+
+
+
